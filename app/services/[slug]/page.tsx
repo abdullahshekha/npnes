@@ -196,7 +196,7 @@ const services: Record<string, ServiceData> = {
   },
   "electronic-repairs": {
     title: "Electronic Repairing Workshop",
-    image: "https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80",
     intro:
       "We have a state-of-the-art electronic repairing workshop equipped with specialist tools and diagnostic equipment. Our experienced technicians handle repairs for critical industrial electronic components, ensuring minimum downtime for your plant.",
     listLabel: "Equipment We Repair",

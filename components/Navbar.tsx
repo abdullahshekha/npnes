@@ -111,16 +111,6 @@ export default function Navbar() {
             Spare Parts
           </Link>
 
-          {/* Contact */}
-          <Link
-            href="/contact"
-            className={`text-sm font-medium transition-colors duration-200 ${
-              isActive("/contact") ? "text-brand border-b-2 border-brand pb-0.5" : "text-charcoal hover:text-brand"
-            }`}
-          >
-            Contact
-          </Link>
-
           <Link
             href="/contact"
             className="ml-2 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
@@ -206,15 +196,6 @@ export default function Navbar() {
             }`}
           >
             Spare Parts
-          </Link>
-          <Link
-            href="/contact"
-            onClick={() => setMobileOpen(false)}
-            className={`text-sm font-medium py-3 border-b border-gray-border transition-colors ${
-              isActive("/contact") ? "text-brand" : "text-charcoal hover:text-brand"
-            }`}
-          >
-            Contact
           </Link>
           <Link
             href="/contact"

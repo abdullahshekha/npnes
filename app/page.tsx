@@ -263,7 +263,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
               Common Questions

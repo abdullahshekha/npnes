@@ -15,6 +15,9 @@ const serviceLinks = [
   { href: "/services/operation-maintenance", label: "Operation & Maintenance" },
   { href: "/services/engine-overhauling", label: "Engine Overhauling" },
   { href: "/services/electrical-switchgear", label: "Electrical & Switchgear" },
+  { href: "/services/electronic-repairs", label: "Electronic Repairs" },
+  { href: "/services/used-power-plants", label: "Used Power Plants" },
+  { href: "/services/emissions-analysis", label: "Emissions Analysis" },
 ];
 
 export default function Footer() {
@@ -24,7 +27,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand */}
         <div>
-          {/* Text wordmark — avoids JPG filter artifacts */}
           <div className="mb-1">
             <span className="font-heading font-bold text-3xl text-white uppercase tracking-wider">
               NPNES
@@ -34,24 +36,28 @@ export default function Footer() {
           <p className="text-sm text-brand font-heading font-semibold uppercase tracking-widest mb-6">
             Energy · Efficiency · Sustainability
           </p>
-          <h3 className="font-heading font-bold text-sm uppercase tracking-wide mb-3 text-gray-400">
-            Quick Links
-          </h3>
-          <ul className="space-y-2">
-            {quickLinks.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="text-sm text-gray-300 hover:text-brand transition-colors duration-200"
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+          {/* Quick Links — desktop only */}
+          <div className="hidden md:block">
+            <h3 className="font-heading font-bold text-sm uppercase tracking-wide mb-3 text-gray-400">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              {quickLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-gray-300 hover:text-brand transition-colors duration-200"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Services */}
+        {/* Services — all 8 links shown; on mobile this column renders first after brand */}
         <div>
           <h3 className="font-heading font-bold text-lg uppercase tracking-wide mb-4 text-white">
             Our Services
@@ -103,7 +109,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10 py-4">
         <p className="text-center text-xs text-gray-400">
-          © {year} Net Power &amp; Energy Solutions. All Rights Reserved.
+          &copy; {year}{" "}Net Power &amp; Energy Solutions. All Rights Reserved.
         </p>
       </div>
     </footer>
