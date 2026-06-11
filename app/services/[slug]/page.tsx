@@ -327,7 +327,7 @@ const services: Record<string, ServiceData> = {
   },
   "honing-roughness-tester": {
     title: "Honing Machine Including Roughness Tester",
-    image: "https://images.unsplash.com/photo-1573998648748-fa6ef521cdf9?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1742729251360-db5c6bd40516?w=1920&q=80",
     intro:
       "NPNES is the leading service provider of in-situ boring and honing of cylinder liners. The services offered are under the supervision of our expert engineers who take care of quality and inspection work. Our honing/deglazing machine is available for cylinder liner diameters from 150mm to 400mm, and a roughness tester is included to verify surface finish quality. Our services are highly regarded due to their flexibility and timely delivery.",
     listLabel: "Service Capabilities",
@@ -394,7 +394,7 @@ const services: Record<string, ServiceData> = {
   },
   "crankshaft-grinding": {
     title: "Crankshaft Grinding & Repair",
-    image: "https://images.unsplash.com/photo-1595787142842-7404bc60470d?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1713371398484-cc4e4f6a262a?w=1920&q=80",
     intro:
       "Net Power & Energy Solutions offers a professional crankshaft repair service delivered by highly trained and experienced supervisors. We can perform large crankshaft grinding up to 20 feet of crankshaft length. Our service covers the full range of crankshaft defects from surface scoring and corrosion to bent or damaged journals, using proven techniques that restore the crankshaft to serviceable condition.",
     listLabel: "Service Capabilities",
