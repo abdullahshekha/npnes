@@ -87,22 +87,24 @@ export default function Navbar() {
               <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
             </Link>
             {/* Dropdown */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-border py-1 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 max-h-80 overflow-y-auto">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[680px] bg-white rounded-lg shadow-lg border border-gray-border py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
               <Link
                 href="/services"
-                className="block px-4 py-2 text-xs font-heading font-bold uppercase text-brand tracking-wide border-b border-gray-border mb-1"
+                className="block px-4 py-2 text-xs font-heading font-bold uppercase text-brand tracking-wide border-b border-gray-border mb-2"
               >
-                All Services
+                All Services →
               </Link>
-              {serviceLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-4 py-2 text-sm text-charcoal-mid hover:text-brand hover:bg-gray-light transition-colors duration-150"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <div className="grid grid-cols-3 gap-0 px-2 pb-1">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-3 py-2 text-sm text-charcoal-mid hover:text-brand hover:bg-gray-light rounded transition-colors duration-150"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
