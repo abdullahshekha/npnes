@@ -50,7 +50,7 @@ const services: Record<string, ServiceData> = {
   },
   amc: {
     title: "Annual Maintenance Contract (AMC)",
-    image: "https://images.unsplash.com/photo-1581092335397-9fa341108e1e?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1509390288171-ce2088f7d08e?w=1920&q=80",
     intro:
       "AMC contracts can be structured around power conditioner or total power plant performance. Quarterly and annual service visits can be planned to ensure the power conditioner or plant is checked, calibrated, or serviced according to manufacturer recommendations. Our contracts ensure long system life and minimal downtime to maximise financial returns for the owner.",
     listLabel: "Contract Benefits",
@@ -158,7 +158,7 @@ const services: Record<string, ServiceData> = {
   },
   "electrical-switchgear": {
     title: "Electrical Engineering & Switchgear Services",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=1920&q=80",
     intro:
       "NPNES is equipped with design & manufacturing facilities for a complete line of low/high voltage switchgear serving industrial, commercial, multi-story plazas, hotels, hospitals and banks. NPNES products meet national & international electricity standards and are run by a team of professional engineers with the spirit of innovation.",
     listLabel: "Products & Services",
@@ -196,7 +196,7 @@ const services: Record<string, ServiceData> = {
   },
   "electronic-repairs": {
     title: "Electronic Repairing Workshop",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=1920&q=80",
     intro:
       "We have a state-of-the-art electronic repairing workshop equipped with specialist tools and diagnostic equipment. Our experienced technicians handle repairs for critical industrial electronic components, ensuring minimum downtime for your plant.",
     listLabel: "Equipment We Repair",
@@ -229,7 +229,7 @@ const services: Record<string, ServiceData> = {
   },
   "used-power-plants": {
     title: "Supply of Used Power Plants",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1636867900334-025210ac78a0?w=1920&q=80",
     intro:
       "NPNES provides all kinds of Diesel, Gas & HFO based used power plants. In addition to offering a vast selection of used engines, NPNES is dedicated to providing high-quality used equipment — a variety of popular makes and models. With a full range of used power generation equipment, NPNES has the equipment you need to keep your operation running.",
     listLabel: "Available Capacities & Types",
@@ -262,7 +262,7 @@ const services: Record<string, ServiceData> = {
   },
   "emissions-analysis": {
     title: "Emissions Analysis",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1585496058078-29596a3a7ced?w=1920&q=80",
     intro:
       "The Emissions Analysis facility is available with Net Power & Energy Solutions as part of our social responsibility to continuously search for environment-friendly solutions. We help plant operators understand and reduce their environmental footprint.",
     listLabel: "Service Includes",
@@ -294,7 +294,7 @@ const services: Record<string, ServiceData> = {
   },
   "inspection-line-boring": {
     title: "Inspection & Engine Line Boring (In-Situ)",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1666634157070-6fd830fb5672?w=1920&q=80",
     intro:
       "This is a specialty of NPNES — providing on-site line boring of large generating and marine diesel engines. The company has a range of in-line boring machines and associated laser and optical alignment tooling and accessories to cover most engine types requiring engine bedplate rejuvenation, whether they be the conventional bedplate layout or the under-slung type. Repairs can take the form of repairing individual main bearing pocket bores or the whole line of bores. The customer may contact us for crankshaft grinding for any type of engine from 100KW to 18MW capacity.",
     listLabel: "Scope of Service",
@@ -327,7 +327,7 @@ const services: Record<string, ServiceData> = {
   },
   "honing-roughness-tester": {
     title: "Honing Machine Including Roughness Tester",
-    image: "https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1573998648748-fa6ef521cdf9?w=1920&q=80",
     intro:
       "NPNES is the leading service provider of in-situ boring and honing of cylinder liners. The services offered are under the supervision of our expert engineers who take care of quality and inspection work. Our honing/deglazing machine is available for cylinder liner diameters from 150mm to 400mm, and a roughness tester is included to verify surface finish quality. Our services are highly regarded due to their flexibility and timely delivery.",
     listLabel: "Service Capabilities",
@@ -361,7 +361,7 @@ const services: Record<string, ServiceData> = {
   },
   "cylinder-head-valve-grinding": {
     title: "Cylinder Head Seat & Valve Grinding",
-    image: "https://images.unsplash.com/photo-1617814084293-8a641ff83de8?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1565954786194-d22abeaac3ae?w=1920&q=80",
     intro:
       "NPNES provides on-site machining support with our range of in-situ portable machines designed for on-site valve and seat grinding. Worn or damaged valve seats and valve faces directly impact engine compression and combustion efficiency. Our specialist equipment and trained technicians restore valve and seat geometry to factory tolerances, returning the cylinder head to full performance without workshop removal.",
     listLabel: "Scope of Work",
@@ -394,7 +394,7 @@ const services: Record<string, ServiceData> = {
   },
   "crankshaft-grinding": {
     title: "Crankshaft Grinding & Repair",
-    image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1595787142842-7404bc60470d?w=1920&q=80",
     intro:
       "Net Power & Energy Solutions offers a professional crankshaft repair service delivered by highly trained and experienced supervisors. We can perform large crankshaft grinding up to 20 feet of crankshaft length. Our service covers the full range of crankshaft defects from surface scoring and corrosion to bent or damaged journals, using proven techniques that restore the crankshaft to serviceable condition.",
     listLabel: "Service Capabilities",
@@ -428,7 +428,7 @@ const services: Record<string, ServiceData> = {
   },
   "rental-power-plants": {
     title: "Rental Power Plant Services",
-    image: "https://images.unsplash.com/photo-1548407260-da850faa41e3?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1658260867231-535a1f7c98b9?w=1920&q=80",
     intro:
       "NPNES offers fast-track rental power plant services — moveable and plug-in type — throughout the country in all sizes, helping businesses increase profits by creating opportunities, solving problems and reducing risk by offering generators on rent. Our rental projects are reliable, built on a highly technical approach, and provide efficient, cost-saving power solutions to ensure trouble-free operation.",
     listLabel: "Rental Offering",
