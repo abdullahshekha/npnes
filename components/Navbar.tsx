@@ -11,6 +11,11 @@ const serviceLinks = [
   { href: "/services/amc", label: "Annual Maintenance Contract" },
   { href: "/services/operation-maintenance", label: "Operation & Maintenance" },
   { href: "/services/engine-overhauling", label: "Engine Overhauling" },
+  { href: "/services/inspection-line-boring", label: "Inspection & Line Boring" },
+  { href: "/services/honing-roughness-tester", label: "Honing & Roughness Testing" },
+  { href: "/services/cylinder-head-valve-grinding", label: "Cylinder Head & Valve Grinding" },
+  { href: "/services/crankshaft-grinding", label: "Crankshaft Grinding & Repair" },
+  { href: "/services/rental-power-plants", label: "Rental Power Plants" },
   { href: "/services/electrical-switchgear", label: "Electrical & Switchgear" },
   { href: "/services/electronic-repairs", label: "Electronic Repairs" },
   { href: "/services/used-power-plants", label: "Used Power Plants" },
@@ -82,7 +87,7 @@ export default function Navbar() {
               <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
             </Link>
             {/* Dropdown */}
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-border py-1 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-border py-1 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 max-h-80 overflow-y-auto">
               <Link
                 href="/services"
                 className="block px-4 py-2 text-xs font-heading font-bold uppercase text-brand tracking-wide border-b border-gray-border mb-1"

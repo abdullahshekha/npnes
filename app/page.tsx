@@ -63,7 +63,7 @@ const brands = [
 ];
 
 const clients = [
-  { name: "Soortt Enterprises", capacity: "6MW Gas & Diesel" },
+  { name: "Soorty Enterprises", capacity: "6MW Gas & Diesel" },
   { name: "Artistic Miliners-03", capacity: "7MW Gas & Diesel" },
   { name: "Diamond International", capacity: "9MW Gas & Diesel" },
   { name: "NP Cotton Mill", capacity: "6MW Gas & Diesel" },

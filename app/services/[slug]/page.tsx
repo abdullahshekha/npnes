@@ -292,6 +292,174 @@ const services: Record<string, ServiceData> = {
       },
     ],
   },
+  "inspection-line-boring": {
+    title: "Inspection & Engine Line Boring (In-Situ)",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
+    intro:
+      "This is a specialty of NPNES — providing on-site line boring of large generating and marine diesel engines. The company has a range of in-line boring machines and associated laser and optical alignment tooling and accessories to cover most engine types requiring engine bedplate rejuvenation, whether they be the conventional bedplate layout or the under-slung type. Repairs can take the form of repairing individual main bearing pocket bores or the whole line of bores. The customer may contact us for crankshaft grinding for any type of engine from 100KW to 18MW capacity.",
+    listLabel: "Scope of Service",
+    items: [
+      "On-site line boring of large generating and marine diesel engines",
+      "In-line boring machines with laser and optical alignment tooling",
+      "Engine bedplate rejuvenation — conventional and under-slung types",
+      "Repairing individual main bearing pocket bores or complete line of bores",
+      "Crankshaft grinding for engines from 100KW to 18MW capacity",
+      "Experienced personnel ensuring precision to the highest quality standards",
+    ],
+    faqs: [
+      {
+        q: "What is in-situ engine line boring?",
+        a: "In-situ line boring means we bring our specialised boring machines to your site and perform the work without removing the engine from its bedplate, reducing downtime and eliminating the risk of transport damage.",
+      },
+      {
+        q: "Which engine capacities can you handle?",
+        a: "Our line boring capability covers engines from 100KW up to 18MW capacity, spanning all major OEM brands used in power generation.",
+      },
+      {
+        q: "What engine types are supported?",
+        a: "We support both conventional bedplate and under-slung type engines, as well as marine diesel engines. Our tooling and alignment accessories cover most engine configurations.",
+      },
+      {
+        q: "How do you ensure bore alignment accuracy?",
+        a: "We use laser and optical alignment tooling alongside our in-line boring machines to achieve precise bore alignment. All work is tested and verified to the highest quality standards before sign-off.",
+      },
+    ],
+  },
+  "honing-roughness-tester": {
+    title: "Honing Machine Including Roughness Tester",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
+    intro:
+      "NPNES is the leading service provider of in-situ boring and honing of cylinder liners. The services offered are under the supervision of our expert engineers who take care of quality and inspection work. Our honing/deglazing machine is available for cylinder liner diameters from 150mm to 400mm, and a roughness tester is included to verify surface finish quality. Our services are highly regarded due to their flexibility and timely delivery.",
+    listLabel: "Service Capabilities",
+    items: [
+      "In-situ boring and honing of cylinder liners",
+      "Cylinder liner diameter range: 150mm to 400mm",
+      "Honing/deglazing machine available for all supported sizes",
+      "Roughness tester included to verify surface finish",
+      "Services supervised by expert engineers",
+      "Flexible deployment with timely delivery",
+      "Available for all major engine brands and fuel types",
+    ],
+    faqs: [
+      {
+        q: "What is cylinder liner honing?",
+        a: "Honing is a precision machining process that refines the surface finish of a cylinder liner bore after boring or repair work. It creates the correct cross-hatch pattern for optimal oil retention and piston ring seating.",
+      },
+      {
+        q: "What liner diameters can you hone?",
+        a: "Our honing machine handles cylinder liner diameters from 150mm to 400mm, covering the majority of engines in the 100KW to 18MW power generation range.",
+      },
+      {
+        q: "How is surface finish quality verified?",
+        a: "We use a dedicated roughness tester to measure the finished surface profile and confirm it meets the manufacturer's specified roughness parameters before returning the engine to service.",
+      },
+      {
+        q: "Can this service be performed on-site?",
+        a: "Yes. Our honing equipment is portable and our team performs all work in-situ at your facility, avoiding the cost and risk of engine removal and transport.",
+      },
+    ],
+  },
+  "cylinder-head-valve-grinding": {
+    title: "Cylinder Head Seat & Valve Grinding",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
+    intro:
+      "NPNES provides on-site machining support with our range of in-situ portable machines designed for on-site valve and seat grinding. Worn or damaged valve seats and valve faces directly impact engine compression and combustion efficiency. Our specialist equipment and trained technicians restore valve and seat geometry to factory tolerances, returning the cylinder head to full performance without workshop removal.",
+    listLabel: "Scope of Work",
+    items: [
+      "In-situ portable valve seat and valve face grinding",
+      "Cylinder head reconditioning on-site",
+      "Valve seat cutting and precision grinding",
+      "Restoration of valve and seat geometry to factory tolerances",
+      "Compatible with all major engine brands",
+      "Expert technicians ensuring precise clearances and sealing",
+    ],
+    faqs: [
+      {
+        q: "Why is valve and seat grinding necessary?",
+        a: "Over time, valve faces and seats wear, leading to poor compression, misfires, increased fuel consumption and power loss. Grinding restores the sealing surfaces to correct geometry, recovering engine performance.",
+      },
+      {
+        q: "Do you remove the cylinder head to perform grinding?",
+        a: "In most cases we perform the work in-situ at the engine, minimising downtime. Where head removal is required, our team can manage the full process including refitment and leak testing.",
+      },
+      {
+        q: "Which engine makes do you support?",
+        a: "Our portable grinding equipment is compatible with all major engine manufacturers including MWM (Deutz), Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Cummins and Perkins.",
+      },
+      {
+        q: "How do you verify the quality of the grind?",
+        a: "We use engineer's blue and leak-down testing to verify that each valve and seat meets the required sealing standard before the engine is returned to service.",
+      },
+    ],
+  },
+  "crankshaft-grinding": {
+    title: "Crankshaft Grinding & Repair",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
+    intro:
+      "Net Power & Energy Solutions offers a professional crankshaft repair service delivered by highly trained and experienced supervisors. We can perform large crankshaft grinding up to 20 feet of crankshaft length. Our service covers the full range of crankshaft defects from surface scoring and corrosion to bent or damaged journals, using proven techniques that restore the crankshaft to serviceable condition.",
+    listLabel: "Service Capabilities",
+    items: [
+      "Crankshaft grinding up to 20 feet in length",
+      "Removal of hard surfaces up to HB 650",
+      "Reforming of damaged fillet radii if required",
+      "Peen straightening of bent crankshafts",
+      "Machining of damaged crankpins and main journals",
+      "Covers engines from 100KW to 18MW capacity",
+      "Experienced supervisory team ensuring quality at every stage",
+    ],
+    faqs: [
+      {
+        q: "What types of crankshaft damage can NPNES repair?",
+        a: "We handle surface scoring, corrosion pitting, journal wear, bearing damage and bent crankshafts. Each crankshaft is assessed individually to determine the most appropriate repair method.",
+      },
+      {
+        q: "What is the maximum crankshaft length you can grind?",
+        a: "We can perform crankshaft grinding up to 20 feet in length, covering the majority of large industrial power generation engines in the 100KW to 18MW range.",
+      },
+      {
+        q: "Can you grind very hard crankshaft surfaces?",
+        a: "Yes. Our equipment is capable of removing hard surfaces as high as HB 650, which covers induction-hardened journals and other hardened crankshaft surfaces.",
+      },
+      {
+        q: "Is crankshaft repair cost-effective compared to replacement?",
+        a: "In most cases yes — crankshaft replacement for large industrial engines is extremely expensive and involves long lead times. Our repair service restores the crankshaft to specification at a fraction of the replacement cost.",
+      },
+    ],
+  },
+  "rental-power-plants": {
+    title: "Rental Power Plant Services",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
+    intro:
+      "NPNES offers fast-track rental power plant services — moveable and plug-in type — throughout the country in all sizes, helping businesses increase profits by creating opportunities, solving problems and reducing risk by offering generators on rent. Our rental projects are reliable, built on a highly technical approach, and provide efficient, cost-saving power solutions to ensure trouble-free operation.",
+    listLabel: "Rental Offering",
+    items: [
+      "Moveable and plug-in type rental generator sets",
+      "Sound proof canopies and open type units available",
+      "All sizes available for any power requirement",
+      "Fast deployment and site commissioning",
+      "Diesel, Gas and HFO fuel type options",
+      "Reliable, technically sound rental solutions",
+      "Efficient and cost-saving power during shutdowns or peak demand",
+    ],
+    faqs: [
+      {
+        q: "What types of rental generators does NPNES offer?",
+        a: "We offer moveable plug-in type generators in both sound-proof canopy and open configurations, covering diesel, gas and HFO fuel types across a range of capacities.",
+      },
+      {
+        q: "How quickly can a rental unit be deployed?",
+        a: "NPNES offers fast-track rental deployment. Once requirements are confirmed, our team mobilises the unit and handles site commissioning, minimising the time before you have power.",
+      },
+      {
+        q: "What is a rental power plant typically used for?",
+        a: "Rental units are commonly used during planned maintenance shutdowns, emergency breakdowns, peak demand periods, temporary construction site power, and as a bridge while a permanent plant is being installed or upgraded.",
+      },
+      {
+        q: "Does NPNES provide operational support for rental units?",
+        a: "Yes. Our team can provide on-site operational and maintenance support for rental units throughout the rental period, ensuring reliable and uninterrupted power delivery.",
+      },
+    ],
+  },
 };
 
 type Params = { slug: string };
