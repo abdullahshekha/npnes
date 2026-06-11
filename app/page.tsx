@@ -108,7 +108,7 @@ export default function Home() {
             "url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "90vh",
+          minHeight: "63vh",
         }}
       >
         <div className="absolute inset-0 bg-charcoal/75" />
