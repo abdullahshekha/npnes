@@ -63,14 +63,14 @@ export default function AboutPage() {
 
       {/* CEO Message */}
       <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
             Leadership
           </p>
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase mb-8">
             CEO Message
           </h2>
-          <blockquote className="border-l-4 border-brand pl-6 text-charcoal-mid leading-8 text-base">
+          <blockquote className="border-l-4 border-brand pl-6 text-charcoal-mid leading-8 text-base max-w-4xl">
             <p>
               I am extremely proud of what we are going to achieve, and even more excited about our
               outlook for an equally promising future business from across the world while earning
@@ -91,7 +91,7 @@ export default function AboutPage() {
 
       {/* Vision */}
       <section className="bg-gray-light py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-5 items-start">
             <div className="flex-shrink-0 w-14 h-14 bg-brand rounded-lg flex items-center justify-center">
               <Eye className="text-white" size={26} />
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase mb-4">
                 Our Vision
               </h2>
-              <p className="text-charcoal-mid leading-8">
+              <p className="text-charcoal-mid leading-8 max-w-3xl">
                 Striving to be a leader company in providing value added and reliable services, as
                 well as contributing to the competitiveness and sustainable development of our valued
                 customers.
@@ -115,7 +115,7 @@ export default function AboutPage() {
 
       {/* Principles */}
       <section className="bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-5 items-start">
             <div className="flex-shrink-0 w-14 h-14 bg-brand rounded-lg flex items-center justify-center">
               <Heart className="text-white" size={26} />
@@ -130,7 +130,7 @@ export default function AboutPage() {
               <h3 className="font-heading font-semibold text-2xl text-brand uppercase mb-4">
                 Customer Focus
               </h3>
-              <p className="text-charcoal-mid leading-8">
+              <p className="text-charcoal-mid leading-8 max-w-3xl">
                 Not losing customer focus and prioritizing customer focus at all time. Sincere, open
                 and honest dialogue with our valued customers and partners as well as our colleagues.
                 Our Service Department is staffed with factory trained technical persons to provide
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="bg-brand py-16">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading font-bold text-4xl text-white uppercase mb-4">
             Partner With Us
           </h2>

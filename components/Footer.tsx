@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
 
 const quickLinks = [
@@ -7,7 +6,6 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/spare-parts", label: "Spare Parts" },
-  { href: "/clients", label: "Our Clients" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -26,13 +24,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand */}
         <div>
-          <Image
-            src="/images/npnes-logo.jpg"
-            alt="NPNES Logo"
-            width={160}
-            height={44}
-            className="h-10 w-auto object-contain mb-3 brightness-0 invert"
-          />
+          {/* Text wordmark — avoids JPG filter artifacts */}
+          <div className="mb-1">
+            <span className="font-heading font-bold text-3xl text-white uppercase tracking-wider">
+              NPNES
+            </span>
+          </div>
+          <p className="text-xs text-gray-400 mb-1">Net Power &amp; Energy Solutions</p>
           <p className="text-sm text-brand font-heading font-semibold uppercase tracking-widest mb-6">
             Energy · Efficiency · Sustainability
           </p>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Wrench, ClipboardList, Settings, Zap, Package, Monitor, CheckCircle2 } from "lucide-react";
+import { Wrench, ClipboardList, Settings, Zap, Package, Monitor, CheckCircle2, ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "NPNES — Net Power & Energy Solutions",
@@ -68,6 +68,33 @@ const clients = [
   { name: "Diamond International", capacity: "9MW Gas & Diesel" },
   { name: "NP Cotton Mill", capacity: "6MW Gas & Diesel" },
   { name: "Habib ADM", capacity: "3MW Gas & Diesel" },
+];
+
+const faqs = [
+  {
+    q: "What services does NPNES provide?",
+    a: "NPNES provides a full range of power plant services including installation & commissioning, annual maintenance contracts (AMC), operation & maintenance (O&M), engine overhauling, electrical & switchgear manufacturing, electronic repairs, and genuine/OEM spare parts supply.",
+  },
+  {
+    q: "Which engine brands does NPNES support?",
+    a: "We support all major engine brands including Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Guascor, Nohab, Cockerill, MWM (Deutz), Perkins, Cummins, Mitsubishi and Niigata for gas, diesel and HFO applications.",
+  },
+  {
+    q: "Does NPNES provide emergency services?",
+    a: "Yes. NPNES maintains an emergency parts inventory and has experienced field service teams on standby. Emergency parts and support are available 24/7 to minimise plant downtime.",
+  },
+  {
+    q: "Can NPNES service power plants outside Pakistan?",
+    a: "Absolutely. Our field service teams provide onsite repairing and maintenance services anywhere in the world, utilising our global resources and network.",
+  },
+  {
+    q: "What is an Annual Maintenance Contract (AMC)?",
+    a: "An AMC is a structured service agreement covering scheduled inspections, calibration and maintenance of your power plant or specific equipment. It ensures long system life, minimal unplanned downtime and maximised financial returns for the plant owner.",
+  },
+  {
+    q: "How do I get a quote or contact NPNES?",
+    a: "You can reach us via the Contact page, by emailing info@npnes.com, or by calling +92 324 8420096 / +92 334 2560701. Our team responds promptly to all inquiries.",
+  },
 ];
 
 export default function Home() {
@@ -181,7 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Brands */}
+      {/* Brands — plain grid, not pill/tab style */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -192,14 +219,11 @@ export default function Home() {
               Brands We Support
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-3 mb-5">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-5">
             {brands.map((brand) => (
-              <span
-                key={brand}
-                className="bg-gray-light border border-gray-border text-charcoal-mid text-sm font-medium px-4 py-2 rounded-full"
-              >
-                {brand}
-              </span>
+              <div key={brand} className="bg-gray-light rounded-lg p-3 text-center">
+                <p className="font-heading font-bold text-xs text-charcoal uppercase">{brand}</p>
+              </div>
             ))}
           </div>
           <p className="text-center text-charcoal-mid text-sm italic">
@@ -219,7 +243,7 @@ export default function Home() {
               Our Clients
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {clients.map((client) => (
               <div
                 key={client.name}
@@ -234,10 +258,40 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Link href="/clients" className="text-brand font-semibold hover:underline text-sm">
-              View All Clients →
-            </Link>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
+              Common Questions
+            </p>
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group border border-gray-border rounded-lg overflow-hidden"
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                  <span className="font-heading font-bold text-sm text-charcoal uppercase pr-4">
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    className="flex-shrink-0 text-brand transition-transform duration-200 group-open:rotate-180"
+                    size={16}
+                  />
+                </summary>
+                <div className="px-5 pb-5 pt-3 border-t border-gray-border text-charcoal-mid text-sm leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

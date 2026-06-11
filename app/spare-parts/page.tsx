@@ -53,14 +53,7 @@ const brands = [
   },
 ];
 
-const alsoSupport = [
-  "NIIGATA",
-  "MITSUBISHI",
-  "CATERPILLAR",
-  "WAUKESHA",
-  "CUMMINS",
-  "GUASCOR",
-];
+const alsoSupport = ["NIIGATA", "MITSUBISHI", "CATERPILLAR", "WAUKESHA", "CUMMINS", "GUASCOR"];
 
 export default function SparePartsPage() {
   return (
@@ -142,25 +135,25 @@ export default function SparePartsPage() {
         </div>
       </section>
 
-      {/* Also support */}
+      {/* Also support — plain text, not pill-style */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
               Additional Support
             </p>
-            <h2 className="font-heading font-bold text-3xl text-charcoal uppercase">
+            <h2 className="font-heading font-bold text-3xl text-charcoal uppercase mb-4">
               Also Available For
             </h2>
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {alsoSupport.map((brand) => (
-              <span
+              <div
                 key={brand}
-                className="bg-gray-light border border-gray-border text-charcoal font-heading font-bold text-sm px-5 py-2 rounded-full"
+                className="bg-gray-light rounded-lg p-4 text-center"
               >
-                {brand}
-              </span>
+                <p className="font-heading font-bold text-sm text-charcoal uppercase">{brand}</p>
+              </div>
             ))}
           </div>
         </div>

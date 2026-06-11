@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
+
+type FAQ = { q: string; a: string };
 
 type ServiceData = {
   title: string;
@@ -9,6 +11,7 @@ type ServiceData = {
   listLabel?: string;
   items: string[];
   image: string;
+  faqs: FAQ[];
 };
 
 const services: Record<string, ServiceData> = {
@@ -26,10 +29,28 @@ const services: Record<string, ServiceData> = {
       "Main line boring capability",
       "All repairs tested to ensure highest quality",
     ],
+    faqs: [
+      {
+        q: "Which engine brands does NPNES support?",
+        a: "NPNES provides back-end support for Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Guascor, Nohab, Cockerill, and especially MWM (Deutz) gas, diesel and HFO engines.",
+      },
+      {
+        q: "Do you offer onsite power plant services?",
+        a: "Yes. Our experienced field service teams travel anywhere in the world to provide onsite repairs, maintenance and overhauling with no geographical limitation.",
+      },
+      {
+        q: "Are replacement parts genuine OEM?",
+        a: "We supply both genuine OEM parts and high-quality equivalent parts, giving clients cost-effective alternatives without compromising plant performance or reliability.",
+      },
+      {
+        q: "How quickly can NPNES respond to emergencies?",
+        a: "We maintain emergency parts inventory and have field teams on standby. Emergency parts are available 24/7 to minimise plant downtime.",
+      },
+    ],
   },
   amc: {
     title: "Annual Maintenance Contract (AMC)",
-    image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
     intro:
       "AMC contracts can be structured around power conditioner or total power plant performance. Quarterly and annual service visits can be planned to ensure the power conditioner or plant is checked, calibrated, or serviced according to manufacturer recommendations. Our contracts ensure long system life and minimal downtime to maximise financial returns for the owner.",
     listLabel: "Contract Benefits",
@@ -40,6 +61,24 @@ const services: Record<string, ServiceData> = {
       "Extended system life and reduced unplanned downtime",
       "Maximised financial returns for plant owners",
       "Factory-trained technical staff on every visit",
+    ],
+    faqs: [
+      {
+        q: "What is included in an AMC?",
+        a: "An AMC typically covers scheduled quarterly and annual inspections, calibration, servicing, and minor repairs in line with the manufacturer's maintenance schedule. Scope can be customised to cover the full plant or specific systems.",
+      },
+      {
+        q: "How often are service visits scheduled?",
+        a: "We plan both quarterly and annual service visits. The exact schedule is agreed at the start of the contract based on the plant type, age and manufacturer recommendations.",
+      },
+      {
+        q: "Can the AMC be customised to our needs?",
+        a: "Yes. AMC contracts are flexible and can be tailored to cover a single power conditioner, specific equipment, or the entire plant from generation to distribution.",
+      },
+      {
+        q: "What happens if equipment breaks down between scheduled visits?",
+        a: "AMC clients benefit from priority response. Our team is available for emergency callouts, and we maintain a stock of critical spare parts to minimise downtime.",
+      },
     ],
   },
   "operation-maintenance": {
@@ -61,6 +100,24 @@ const services: Record<string, ServiceData> = {
       "Performance Monitoring",
       "Performance guarantees",
     ],
+    faqs: [
+      {
+        q: "What does NPNES cover under O&M?",
+        a: "NPNES takes full responsibility for mobilisation of the O&M team, day-to-day plant operation, routine and preventive maintenance, equipment repair, fuel management, performance monitoring and performance guarantees.",
+      },
+      {
+        q: "Does NPNES provide O&M services outside Pakistan?",
+        a: "Yes. We utilise our global resources to provide complete plant O&M services worldwide. Our teams are experienced in working across different regulatory environments and climates.",
+      },
+      {
+        q: "How does NPNES ensure plant performance?",
+        a: "We implement structured preventive maintenance programmes, continuous performance monitoring, and provide engineering support to optimise plant efficiency and reliability.",
+      },
+      {
+        q: "Can NPNES take over O&M of an existing plant?",
+        a: "Yes. We can mobilise an O&M organisation for existing plants at any stage of their lifecycle, from newly commissioned plants to ageing assets requiring intensive support.",
+      },
+    ],
   },
   "engine-overhauling": {
     title: "Engine Major Overhauling & Trouble Shooting",
@@ -79,6 +136,24 @@ const services: Record<string, ServiceData> = {
       "Honing Machine Including Roughness Tester — cylinder liner diameter 150mm to 400mm",
       "Cylinder Head Seat & Valve Grinding",
       "Crankshaft grinding up to 20 feet length",
+    ],
+    faqs: [
+      {
+        q: "What engine types can NPNES overhaul?",
+        a: "We overhaul Gas, Diesel and HFO engines from all major manufacturers including MWM (Deutz), Jenbacher, MAN, Wartsila, Caterpillar and others across the 100KW to 18MW capacity range.",
+      },
+      {
+        q: "Do you provide in-situ (onsite) engine overhauling?",
+        a: "Yes. We offer in-situ engine line boring and overhauling services, meaning we bring our equipment to your site to minimise transport risk and downtime.",
+      },
+      {
+        q: "What cylinder liner diameters can you handle?",
+        a: "Our honing machine handles cylinder liner diameters from 150mm to 400mm, with a roughness tester included to verify finish quality.",
+      },
+      {
+        q: "How long does a major engine overhaul take?",
+        a: "Overhaul duration depends on engine size and condition. We assess each engine individually and provide a detailed timeline before commencing work to help you plan around production schedules.",
+      },
     ],
   },
   "electrical-switchgear": {
@@ -100,6 +175,24 @@ const services: Record<string, ServiceData> = {
       "Cable Tray / Cable ladder",
       "Component of LV switchgear",
     ],
+    faqs: [
+      {
+        q: "What types of switchgear does NPNES manufacture?",
+        a: "We manufacture a complete range of LV switchgear including DBs, distribution panels, PFI panels, motor control panels, ATS/AMF panels, synchronising panels, bus tie ducts and more.",
+      },
+      {
+        q: "Do NPNES products meet international standards?",
+        a: "Yes. All NPNES switchgear products are designed and manufactured to meet both national Pakistani electricity standards and applicable international standards.",
+      },
+      {
+        q: "Can you design custom panels for specific applications?",
+        a: "Absolutely. Our engineering team designs custom panels to match specific load requirements, installation environments and client specifications.",
+      },
+      {
+        q: "Which sectors do you serve?",
+        a: "We serve industrial facilities, commercial buildings, multi-storey plazas, hotels, hospitals, banks and power plants requiring reliable low and high voltage distribution solutions.",
+      },
+    ],
   },
   "electronic-repairs": {
     title: "Electronic Repairing Workshop",
@@ -114,6 +207,24 @@ const services: Record<string, ServiceData> = {
       "VR Cards",
       "TEM EVO Cards",
       "HMI, IPC",
+    ],
+    faqs: [
+      {
+        q: "What electronic components do you repair?",
+        a: "We repair PLC cards, VFDs, inverters, electronic actuator motors, VR cards, TEM EVO cards, HMI systems and IPC units used in power plant control and automation.",
+      },
+      {
+        q: "How long does an electronic repair typically take?",
+        a: "Turnaround time depends on the component and fault complexity. We diagnose each component and give a clear timeline before starting work. Many standard repairs are completed within a few business days.",
+      },
+      {
+        q: "Do repaired components come with a warranty?",
+        a: "Yes. Repaired components are tested before return and we provide a warranty period on our workmanship, giving clients confidence in the reliability of the repaired parts.",
+      },
+      {
+        q: "Can you repair components from any manufacturer?",
+        a: "Our technicians are experienced with components from all major industrial manufacturers. We handle both common and specialist items used in gas, diesel and HFO power plant control systems.",
+      },
     ],
   },
   "used-power-plants": {
@@ -130,6 +241,24 @@ const services: Record<string, ServiceData> = {
       "Various popular OEM makes and models",
       "All equipment inspected and tested before supply",
     ],
+    faqs: [
+      {
+        q: "What capacity range is available?",
+        a: "We supply used power plants from 100KW up to 18MW. Whether you need a small standby unit or a large baseload plant, we can source the right equipment.",
+      },
+      {
+        q: "What fuel types are available?",
+        a: "We supply diesel, natural gas and HFO (Heavy Fuel Oil) engine-based power plants to suit different site fuel availability and economic considerations.",
+      },
+      {
+        q: "How do you ensure the quality of used equipment?",
+        a: "All used power plants are inspected and tested before supply. We provide honest condition assessments and can carry out reconditioning or overhauling prior to delivery if required.",
+      },
+      {
+        q: "Do you provide installation and commissioning support?",
+        a: "Yes. NPNES can provide full installation, testing and commissioning support for supplied used power plants, ensuring they are fully operational before handover.",
+      },
+    ],
   },
   "emissions-analysis": {
     title: "Emissions Analysis",
@@ -143,6 +272,24 @@ const services: Record<string, ServiceData> = {
       "Recommendations for emissions reduction",
       "Engine tuning for optimal fuel efficiency and lower emissions",
       "Documentation for regulatory submissions",
+    ],
+    faqs: [
+      {
+        q: "What does an emissions analysis involve?",
+        a: "Our team measures exhaust emissions from your power plant engines, compares results against applicable national and international standards, and provides a detailed report with findings.",
+      },
+      {
+        q: "Why is emissions analysis important?",
+        a: "Emissions analysis helps plant operators meet regulatory requirements, identify engine inefficiencies, reduce fuel consumption and demonstrate environmental responsibility to stakeholders.",
+      },
+      {
+        q: "How often should emissions analysis be conducted?",
+        a: "We recommend annual emissions analysis as a minimum, or following any major engine work. More frequent testing may be required to satisfy specific regulatory or contractual obligations.",
+      },
+      {
+        q: "Can NPNES help reduce our plant emissions?",
+        a: "Yes. Based on analysis findings, we provide practical recommendations including engine tuning, combustion optimisation and component upgrades to reduce emissions while maintaining output.",
+      },
     ],
   },
 };
@@ -207,11 +354,11 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Content */}
+      {/* Main content */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Main content */}
+            {/* Detail */}
             <div className="lg:col-span-2">
               <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
                 Service Detail
@@ -226,7 +373,7 @@ export default async function ServiceDetailPage({
                   <h3 className="font-heading font-bold text-2xl text-charcoal uppercase mb-4">
                     {svc.listLabel}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mb-12">
                     {svc.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <CheckCircle2 className="text-brand flex-shrink-0 mt-0.5" size={18} />
@@ -236,6 +383,32 @@ export default async function ServiceDetailPage({
                   </ul>
                 </>
               )}
+
+              {/* FAQs */}
+              <h3 className="font-heading font-bold text-2xl text-charcoal uppercase mb-5">
+                Frequently Asked Questions
+              </h3>
+              <div className="space-y-3">
+                {svc.faqs.map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="group border border-gray-border rounded-lg overflow-hidden"
+                  >
+                    <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                      <span className="font-heading font-bold text-sm text-charcoal uppercase pr-4">
+                        {faq.q}
+                      </span>
+                      <ChevronDown
+                        className="flex-shrink-0 text-brand transition-transform duration-200 group-open:rotate-180"
+                        size={16}
+                      />
+                    </summary>
+                    <div className="px-4 pb-4 pt-3 border-t border-gray-border text-charcoal-mid text-sm leading-relaxed">
+                      {faq.a}
+                    </div>
+                  </details>
+                ))}
+              </div>
             </div>
 
             {/* Side CTA */}
@@ -267,7 +440,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Other services */}
+      {/* View all */}
       <section className="bg-gray-light py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-charcoal-mid text-sm mb-3">Explore more of what we offer</p>

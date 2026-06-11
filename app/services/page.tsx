@@ -8,7 +8,7 @@ import {
   Monitor,
   Package,
   Wind,
-  BarChart2,
+  ChevronDown,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -71,12 +71,12 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      {/* Page hero */}
+      {/* Page hero — industrial machinery image */}
       <section
         className="relative flex items-center justify-center py-24"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=1920&q=80')",
+            "url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "40vh",
