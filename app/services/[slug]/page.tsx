@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
+import { generators } from "@/lib/generators";
 
 type FAQ = { q: string; a: string };
 
@@ -19,7 +21,7 @@ const services: Record<string, ServiceData> = {
     title: "Power Plant Services",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
     intro:
-      "NPNES provides back-end product support for Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Guascor, Nohab, Cockerill, and especially MWM (Deutz) gas, diesel and HFO engines through services and parts. Our aim is to be a real alternative to the OEM builder through fast, cost-effective and slim services.",
+      "NPNES provides back-end product support for MWM, Caterpillar, Jenbacher, MAN, Wartsila, Waukesha, Guascor, Nohab and especially MWM (Deutz) gas, diesel and HFO engines through services and parts. Our aim is to be a real alternative to the OEM builder through fast, cost-effective and slim services.",
     listLabel: "Key Features",
     items: [
       "Diversified experience in Power Plant Solutions",
@@ -32,7 +34,7 @@ const services: Record<string, ServiceData> = {
     faqs: [
       {
         q: "Which engine brands does NPNES support?",
-        a: "NPNES provides back-end support for Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Guascor, Nohab, Cockerill, and especially MWM (Deutz) gas, diesel and HFO engines.",
+        a: "NPNES provides back-end support for MWM, Caterpillar, Jenbacher, MAN, Wartsila, Waukesha, Guascor, Nohab and especially MWM (Deutz) gas, diesel and HFO engines.",
       },
       {
         q: "Do you offer onsite power plant services?",
@@ -128,14 +130,11 @@ const services: Record<string, ServiceData> = {
     items: [
       "Overhauling of Gas, Diesel & HFO Power Plants",
       "Purifiers: ALFA LAVAL, WESTFALIA, MITSUBISHI, etc.",
-      "Air Compressors: IMW, SAFE, BOGA, HENSHING, etc.",
+      "Air Compressors: HATLAPA, Neuenhauser, BOGA, HENSHING, etc.",
       "Heat Exchangers: ALFA LAVAL, NKR, GEA, etc.",
-      "Rental power plant services — moveable, plug-in type, sound proof canopies & open type",
       "Engine Overhauling & Routine Maintenance",
-      "Inspection & Engine Line Boring (In-Situ) — 100KW to 18MW capacity",
       "Honing Machine Including Roughness Tester — cylinder liner diameter 150mm to 400mm",
       "Cylinder Head Seat & Valve Grinding",
-      "Crankshaft grinding up to 20 feet length",
     ],
     faqs: [
       {
@@ -143,8 +142,8 @@ const services: Record<string, ServiceData> = {
         a: "We overhaul Gas, Diesel and HFO engines from all major manufacturers including MWM (Deutz), Jenbacher, MAN, Wartsila, Caterpillar and others across the 100KW to 18MW capacity range.",
       },
       {
-        q: "Do you provide in-situ (onsite) engine overhauling?",
-        a: "Yes. We offer in-situ engine line boring and overhauling services, meaning we bring our equipment to your site to minimise transport risk and downtime.",
+        q: "Do you provide ON-SITE Cylinder head Rebuild services?",
+        a: "We can provide services for cylinder head rebuild service for 100mm bore to 260 mm bore engines.",
       },
       {
         q: "What cylinder liner diameters can you handle?",
@@ -174,6 +173,7 @@ const services: Record<string, ServiceData> = {
       "Bus Tie Duct",
       "Cable Tray / Cable ladder",
       "Component of LV switchgear",
+      "Transformer installation repair and maintenance",
     ],
     faqs: [
       {
@@ -292,73 +292,6 @@ const services: Record<string, ServiceData> = {
       },
     ],
   },
-  "inspection-line-boring": {
-    title: "Inspection & Engine Line Boring (In-Situ)",
-    image: "https://images.unsplash.com/photo-1666634157070-6fd830fb5672?w=1920&q=80",
-    intro:
-      "This is a specialty of NPNES — providing on-site line boring of large generating and marine diesel engines. The company has a range of in-line boring machines and associated laser and optical alignment tooling and accessories to cover most engine types requiring engine bedplate rejuvenation, whether they be the conventional bedplate layout or the under-slung type. Repairs can take the form of repairing individual main bearing pocket bores or the whole line of bores. The customer may contact us for crankshaft grinding for any type of engine from 100KW to 18MW capacity.",
-    listLabel: "Scope of Service",
-    items: [
-      "On-site line boring of large generating and marine diesel engines",
-      "In-line boring machines with laser and optical alignment tooling",
-      "Engine bedplate rejuvenation — conventional and under-slung types",
-      "Repairing individual main bearing pocket bores or complete line of bores",
-      "Crankshaft grinding for engines from 100KW to 18MW capacity",
-      "Experienced personnel ensuring precision to the highest quality standards",
-    ],
-    faqs: [
-      {
-        q: "What is in-situ engine line boring?",
-        a: "In-situ line boring means we bring our specialised boring machines to your site and perform the work without removing the engine from its bedplate, reducing downtime and eliminating the risk of transport damage.",
-      },
-      {
-        q: "Which engine capacities can you handle?",
-        a: "Our line boring capability covers engines from 100KW up to 18MW capacity, spanning all major OEM brands used in power generation.",
-      },
-      {
-        q: "What engine types are supported?",
-        a: "We support both conventional bedplate and under-slung type engines, as well as marine diesel engines. Our tooling and alignment accessories cover most engine configurations.",
-      },
-      {
-        q: "How do you ensure bore alignment accuracy?",
-        a: "We use laser and optical alignment tooling alongside our in-line boring machines to achieve precise bore alignment. All work is tested and verified to the highest quality standards before sign-off.",
-      },
-    ],
-  },
-  "honing-roughness-tester": {
-    title: "Honing Machine Including Roughness Tester",
-    image: "https://images.unsplash.com/photo-1742729251360-db5c6bd40516?w=1920&q=80",
-    intro:
-      "NPNES is the leading service provider of in-situ boring and honing of cylinder liners. The services offered are under the supervision of our expert engineers who take care of quality and inspection work. Our honing/deglazing machine is available for cylinder liner diameters from 150mm to 400mm, and a roughness tester is included to verify surface finish quality. Our services are highly regarded due to their flexibility and timely delivery.",
-    listLabel: "Service Capabilities",
-    items: [
-      "In-situ boring and honing of cylinder liners",
-      "Cylinder liner diameter range: 150mm to 400mm",
-      "Honing/deglazing machine available for all supported sizes",
-      "Roughness tester included to verify surface finish",
-      "Services supervised by expert engineers",
-      "Flexible deployment with timely delivery",
-      "Available for all major engine brands and fuel types",
-    ],
-    faqs: [
-      {
-        q: "What is cylinder liner honing?",
-        a: "Honing is a precision machining process that refines the surface finish of a cylinder liner bore after boring or repair work. It creates the correct cross-hatch pattern for optimal oil retention and piston ring seating.",
-      },
-      {
-        q: "What liner diameters can you hone?",
-        a: "Our honing machine handles cylinder liner diameters from 150mm to 400mm, covering the majority of engines in the 100KW to 18MW power generation range.",
-      },
-      {
-        q: "How is surface finish quality verified?",
-        a: "We use a dedicated roughness tester to measure the finished surface profile and confirm it meets the manufacturer's specified roughness parameters before returning the engine to service.",
-      },
-      {
-        q: "Can this service be performed on-site?",
-        a: "Yes. Our honing equipment is portable and our team performs all work in-situ at your facility, avoiding the cost and risk of engine removal and transport.",
-      },
-    ],
-  },
   "cylinder-head-valve-grinding": {
     title: "Cylinder Head Seat & Valve Grinding",
     image: "https://images.unsplash.com/photo-1565954786194-d22abeaac3ae?w=1920&q=80",
@@ -389,74 +322,6 @@ const services: Record<string, ServiceData> = {
       {
         q: "How do you verify the quality of the grind?",
         a: "We use engineer's blue and leak-down testing to verify that each valve and seat meets the required sealing standard before the engine is returned to service.",
-      },
-    ],
-  },
-  "crankshaft-grinding": {
-    title: "Crankshaft Grinding & Repair",
-    image: "https://images.unsplash.com/photo-1713371398484-cc4e4f6a262a?w=1920&q=80",
-    intro:
-      "Net Power & Energy Solutions offers a professional crankshaft repair service delivered by highly trained and experienced supervisors. We can perform large crankshaft grinding up to 20 feet of crankshaft length. Our service covers the full range of crankshaft defects from surface scoring and corrosion to bent or damaged journals, using proven techniques that restore the crankshaft to serviceable condition.",
-    listLabel: "Service Capabilities",
-    items: [
-      "Crankshaft grinding up to 20 feet in length",
-      "Removal of hard surfaces up to HB 650",
-      "Reforming of damaged fillet radii if required",
-      "Peen straightening of bent crankshafts",
-      "Machining of damaged crankpins and main journals",
-      "Covers engines from 100KW to 18MW capacity",
-      "Experienced supervisory team ensuring quality at every stage",
-    ],
-    faqs: [
-      {
-        q: "What types of crankshaft damage can NPNES repair?",
-        a: "We handle surface scoring, corrosion pitting, journal wear, bearing damage and bent crankshafts. Each crankshaft is assessed individually to determine the most appropriate repair method.",
-      },
-      {
-        q: "What is the maximum crankshaft length you can grind?",
-        a: "We can perform crankshaft grinding up to 20 feet in length, covering the majority of large industrial power generation engines in the 100KW to 18MW range.",
-      },
-      {
-        q: "Can you grind very hard crankshaft surfaces?",
-        a: "Yes. Our equipment is capable of removing hard surfaces as high as HB 650, which covers induction-hardened journals and other hardened crankshaft surfaces.",
-      },
-      {
-        q: "Is crankshaft repair cost-effective compared to replacement?",
-        a: "In most cases yes — crankshaft replacement for large industrial engines is extremely expensive and involves long lead times. Our repair service restores the crankshaft to specification at a fraction of the replacement cost.",
-      },
-    ],
-  },
-  "rental-power-plants": {
-    title: "Rental Power Plant Services",
-    image: "https://images.unsplash.com/photo-1658260867231-535a1f7c98b9?w=1920&q=80",
-    intro:
-      "NPNES offers fast-track rental power plant services — moveable and plug-in type — throughout the country in all sizes, helping businesses increase profits by creating opportunities, solving problems and reducing risk by offering generators on rent. Our rental projects are reliable, built on a highly technical approach, and provide efficient, cost-saving power solutions to ensure trouble-free operation.",
-    listLabel: "Rental Offering",
-    items: [
-      "Moveable and plug-in type rental generator sets",
-      "Sound proof canopies and open type units available",
-      "All sizes available for any power requirement",
-      "Fast deployment and site commissioning",
-      "Diesel, Gas and HFO fuel type options",
-      "Reliable, technically sound rental solutions",
-      "Efficient and cost-saving power during shutdowns or peak demand",
-    ],
-    faqs: [
-      {
-        q: "What types of rental generators does NPNES offer?",
-        a: "We offer moveable plug-in type generators in both sound-proof canopy and open configurations, covering diesel, gas and HFO fuel types across a range of capacities.",
-      },
-      {
-        q: "How quickly can a rental unit be deployed?",
-        a: "NPNES offers fast-track rental deployment. Once requirements are confirmed, our team mobilises the unit and handles site commissioning, minimising the time before you have power.",
-      },
-      {
-        q: "What is a rental power plant typically used for?",
-        a: "Rental units are commonly used during planned maintenance shutdowns, emergency breakdowns, peak demand periods, temporary construction site power, and as a bridge while a permanent plant is being installed or upgraded.",
-      },
-      {
-        q: "Does NPNES provide operational support for rental units?",
-        a: "Yes. Our team can provide on-site operational and maintenance support for rental units throughout the rental period, ensuring reliable and uninterrupted power delivery.",
       },
     ],
   },
@@ -607,6 +472,68 @@ export default async function ServiceDetailPage({
           </div>
         </div>
       </section>
+
+      {/* Available Generators — shown only on used-power-plants */}
+      {slug === "used-power-plants" && (
+        <section className="bg-gray-light py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
+                In Stock
+              </p>
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase">
+                Available Generators
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {generators.map((gen) => (
+                <div
+                  key={gen.slug}
+                  className="bg-white rounded-lg shadow-sm border border-gray-border hover:shadow-md hover:border-brand transition-all duration-200 overflow-hidden"
+                >
+                  {/* Card image */}
+                  <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
+                    <Image
+                      src={gen.images[0]}
+                      alt={gen.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Card body */}
+                  <div className="p-5">
+                    <h3 className="font-heading font-bold text-lg text-brand uppercase mb-3">
+                      {gen.name}
+                    </h3>
+                    <div className="border-t border-gray-border pt-3 space-y-2 mb-4">
+                      {[
+                        { label: "Brand", value: gen.brand },
+                        { label: "Model", value: gen.model },
+                        { label: "Fuel", value: gen.fuel },
+                        { label: "kW", value: String(gen.kw) },
+                      ].map((row) => (
+                        <div key={row.label} className="flex items-center justify-between text-sm">
+                          <span className="text-charcoal-mid">{row.label}:</span>
+                          <span className="font-bold text-charcoal">{row.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex justify-end">
+                      <Link
+                        href={`/used-power-plants/${gen.slug}`}
+                        className="border border-brand text-brand text-sm font-semibold px-4 py-2 rounded hover:bg-brand hover:text-white transition-colors duration-200"
+                      >
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* View all */}
       <section className="bg-gray-light py-16">

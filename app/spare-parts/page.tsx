@@ -5,28 +5,20 @@ import { Package, Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Spare Parts — NPNES",
   description:
-    "Genuine and OEM spare parts for Deutz MWM, Wartsila, Perkins, MAN B&W, Jenbacher and more.",
+    "Genuine and OEM spare parts for MWM Deutz, Perkins, Caterpillar, Jenbacher and more.",
 };
 
 const brands = [
   {
-    name: "DEUTZ (MWM)",
-    desc: "Genuine & OEM parts for MWM Diesel, GAS and HFO Engines",
+    name: "MWM (DEUTZ)",
+    desc: "Genuine & OEM parts for MWM Diesel, GAS Engines",
     series: [
       "TCG 2032 Series",
       "TCG 2020 Series",
       "TCG 2016 Series",
       "TBG 620 Series",
       "TBG 616 Series",
-      "TGD 2020 Series",
-      "M 640 HFO",
-      "M 540 HFO",
     ],
-  },
-  {
-    name: "WARTSILA",
-    desc: "Genuine & OEM parts for WARTSILA HFO Engines",
-    series: ["WARTSILA 20 Series", "WARTSILA 32 Series", "WARTSILA 46 Series"],
   },
   {
     name: "PERKINS",
@@ -42,18 +34,43 @@ const brands = [
     ],
   },
   {
-    name: "MAN B&W",
-    desc: "Genuine & OEM parts for MAN HFO Engines",
-    series: ["40/45 Series", "48/60 Series"],
+    name: "CATERPILLAR",
+    desc: "Genuine & OEM parts for Caterpillar Diesel, GAS Engines",
+    series: [
+      "3400 Series",
+      "3500 Series",
+      "All Type of C Series Engines, C7, C13, C15 & C19",
+      "CG132 Series",
+      "CG170 Series",
+      "CG260 Series",
+    ],
   },
   {
     name: "JENBACHER (GE)",
     desc: "Genuine & OEM parts for GAS Engines",
-    series: ["JGS 616 Series", "JGS 320 Series", "JGS 316 Series", "JGS 620 Series"],
+    series: ["Jenbacher 3 Series", "Jenbacher 4 Series", "Jenbacher 6 Series"],
+  },
+  {
+    name: "MTU (ROLLS ROYCE)",
+    desc: "Genuine & OEM parts for MTU Diesel, GAS Engines",
+    series: ["2000 Series", "4000 Series"],
+  },
+  {
+    name: "Electronic Control Parts",
+    desc: "We supply for: Caterpillar, MTU, Cummins, Perkins, Volvo, Scania, DEUTZ and many other brands:",
+    series: [
+      "EMC, GCM",
+      "Governor Cards",
+      "Wastegate Controller",
+      "Compressor By Pass",
+      "Exhaust By Pass",
+      "PLC Cards",
+      "Generator Set Controllers — EMCP, PCC",
+    ],
   },
 ];
 
-const alsoSupport = ["NIIGATA", "MITSUBISHI", "CATERPILLAR", "WAUKESHA", "CUMMINS", "GUASCOR"];
+const alsoSupport = ["NIIGATA", "MITSUBISHI", "WAUKESHA", "CUMMINS", "GUASCOR"];
 
 export default function SparePartsPage() {
   return (

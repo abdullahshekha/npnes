@@ -57,17 +57,20 @@ const reasons = [
 ];
 
 const brands = [
-  "Jenbacher", "MAN", "Wartsila", "Caterpillar", "Waukesha",
-  "Guascor", "Nohab", "Cockerill", "MWM (Deutz)", "Perkins",
-  "Cummins", "Mitsubishi", "Niigata",
+  "Jenbacher", "MTU", "Wartsila", "Caterpillar", "Waukesha",
+  "Guascor", "MWM (Deutz)", "Perkins", "Cummins",
 ];
 
-const clients = [
-  { name: "Soorty Enterprises", capacity: "6MW Gas & Diesel" },
-  { name: "Artistic Miliners-03", capacity: "7MW Gas & Diesel" },
-  { name: "Diamond International", capacity: "9MW Gas & Diesel" },
-  { name: "NP Cotton Mill", capacity: "6MW Gas & Diesel" },
-  { name: "Habib ADM", capacity: "3MW Gas & Diesel" },
+const segments = [
+  "Textile Industry",
+  "Cement Industry",
+  "Oil & Gas",
+  "Pharmaceutical",
+  "FMCG Industries",
+  "Hospital & Commercial Buildings",
+  "Chemical Industry",
+  "IPP & Power",
+  "Edible Oil Industry",
 ];
 
 const faqs = [
@@ -77,7 +80,7 @@ const faqs = [
   },
   {
     q: "Which engine brands does NPNES support?",
-    a: "We support all major engine brands including Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Guascor, Nohab, Cockerill, MWM (Deutz), Perkins, Cummins, Mitsubishi and Niigata for gas, diesel and HFO applications.",
+    a: "We support all major engine brands including Jenbacher, MTU, Wartsila, Caterpillar, Waukesha, Guascor, MWM (Deutz), Perkins and Cummins for gas, diesel and HFO applications.",
   },
   {
     q: "Does NPNES provide emergency services?",
@@ -240,29 +243,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clients snapshot */}
+      {/* Segments We Serve */}
       <section className="bg-gray-light py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
-              Trusted By
+              Industries We Serve
             </p>
             <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase">
-              Our Clients
+              Segments We Serve
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {clients.map((client) => (
+            {segments.map((segment) => (
               <div
-                key={client.name}
-                className="bg-white rounded-lg p-5 shadow-sm border border-gray-border"
+                key={segment}
+                className="bg-white rounded-lg p-5 shadow-sm border border-gray-border flex items-center gap-3"
               >
-                <p className="font-heading font-bold text-lg text-charcoal uppercase mb-2">
-                  {client.name}
+                <span className="w-2 h-2 rounded-full bg-brand flex-shrink-0" />
+                <p className="font-heading font-bold text-lg text-charcoal uppercase">
+                  {segment}
                 </p>
-                <span className="inline-block bg-brand-light text-brand text-xs font-semibold px-3 py-1 rounded-full">
-                  {client.capacity}
-                </span>
               </div>
             ))}
           </div>

@@ -11,11 +11,7 @@ const serviceLinks = [
   { href: "/services/amc", label: "Annual Maintenance Contract" },
   { href: "/services/operation-maintenance", label: "Operation & Maintenance" },
   { href: "/services/engine-overhauling", label: "Engine Overhauling" },
-  { href: "/services/inspection-line-boring", label: "Inspection & Line Boring" },
-  { href: "/services/honing-roughness-tester", label: "Honing & Roughness Testing" },
   { href: "/services/cylinder-head-valve-grinding", label: "Cylinder Head & Valve Grinding" },
-  { href: "/services/crankshaft-grinding", label: "Crankshaft Grinding & Repair" },
-  { href: "/services/rental-power-plants", label: "Rental Power Plants" },
   { href: "/services/electrical-switchgear", label: "Electrical & Switchgear" },
   { href: "/services/electronic-repairs", label: "Electronic Repairs" },
   { href: "/services/used-power-plants", label: "Used Power Plants" },
@@ -118,6 +114,16 @@ export default function Navbar() {
             Spare Parts
           </Link>
 
+          {/* Used Power Plant */}
+          <Link
+            href="/services/used-power-plants"
+            className={`text-sm font-medium transition-colors duration-200 ${
+              pathname === "/services/used-power-plants" ? "text-brand border-b-2 border-brand pb-0.5" : "text-charcoal hover:text-brand"
+            }`}
+          >
+            Used Power Plant
+          </Link>
+
           <Link
             href="/contact"
             className="ml-2 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors duration-200"
@@ -203,6 +209,15 @@ export default function Navbar() {
             }`}
           >
             Spare Parts
+          </Link>
+          <Link
+            href="/services/used-power-plants"
+            onClick={() => setMobileOpen(false)}
+            className={`text-sm font-medium py-3 border-b border-gray-border transition-colors ${
+              pathname === "/services/used-power-plants" ? "text-brand" : "text-charcoal hover:text-brand"
+            }`}
+          >
+            Used Power Plant
           </Link>
           <Link
             href="/contact"

@@ -8,11 +8,7 @@ import {
   Monitor,
   Package,
   Wind,
-  Gauge,
   Settings2,
-  RotateCcw,
-  Truck,
-  ScanLine,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -71,34 +67,10 @@ const services = [
     desc: "Emissions analysis facility available as part of NPNES's commitment to searching for environment-friendly power generation solutions.",
   },
   {
-    slug: "inspection-line-boring",
-    icon: ScanLine,
-    title: "Inspection & Engine Line Boring (In-Situ)",
-    desc: "On-site line boring of large generating and marine diesel engines using precision in-line boring machines with laser and optical alignment tooling — 100KW to 18MW capacity.",
-  },
-  {
-    slug: "honing-roughness-tester",
-    icon: Gauge,
-    title: "Honing Machine Including Roughness Tester",
-    desc: "In-situ boring and honing of cylinder liners for diameters 150mm to 400mm, with a roughness tester to verify surface finish quality to manufacturer specifications.",
-  },
-  {
     slug: "cylinder-head-valve-grinding",
     icon: Settings2,
     title: "Cylinder Head Seat & Valve Grinding",
     desc: "On-site valve and seat grinding using portable in-situ machines, restoring cylinder head geometry to factory tolerances for all major engine brands.",
-  },
-  {
-    slug: "crankshaft-grinding",
-    icon: RotateCcw,
-    title: "Crankshaft Grinding & Repair",
-    desc: "Professional crankshaft grinding up to 20 feet length, including journal machining, fillet reforming, peen straightening and removal of hard surfaces up to HB 650.",
-  },
-  {
-    slug: "rental-power-plants",
-    icon: Truck,
-    title: "Rental Power Plant Services",
-    desc: "Fast-track rental generator sets — moveable, plug-in type in sound-proof canopies and open configurations — for temporary power needs, shutdowns or peak demand.",
   },
 ];
 
