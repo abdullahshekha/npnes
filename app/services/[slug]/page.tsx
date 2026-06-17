@@ -292,7 +292,7 @@ const services: Record<string, ServiceData> = {
   },
   "energy-automation": {
     title: "Energy Automation",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80",
+    image: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?w=1920&q=80",
     intro:
       "We specialize in integrating advanced modules, PLC, SCADA systems, instrumentation and process control to autonomously manage, optimize, and protect your critical power grids and industrial facilities. By continuously monitoring performance and balancing consumption, we deliver high-availability solutions that maximize operational uptime. Our tailored approach reduces costs, eliminates waste, and drives your business toward a sustainable, energy-efficient future.",
     listLabel: "Scope of Work",
