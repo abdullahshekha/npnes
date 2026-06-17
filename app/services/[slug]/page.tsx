@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
-import { generators } from "@/lib/generators";
 
 type FAQ = { q: string; a: string };
 
@@ -292,36 +290,38 @@ const services: Record<string, ServiceData> = {
       },
     ],
   },
-  "cylinder-head-valve-grinding": {
-    title: "Cylinder Head Seat & Valve Grinding",
-    image: "https://images.unsplash.com/photo-1565954786194-d22abeaac3ae?w=1920&q=80",
+  "energy-automation": {
+    title: "Energy Automation",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80",
     intro:
-      "NPNES provides on-site machining support with our range of in-situ portable machines designed for on-site valve and seat grinding. Worn or damaged valve seats and valve faces directly impact engine compression and combustion efficiency. Our specialist equipment and trained technicians restore valve and seat geometry to factory tolerances, returning the cylinder head to full performance without workshop removal.",
+      "We specialize in integrating advanced modules, PLC, SCADA systems, instrumentation and process control to autonomously manage, optimize, and protect your critical power grids and industrial facilities. By continuously monitoring performance and balancing consumption, we deliver high-availability solutions that maximize operational uptime. Our tailored approach reduces costs, eliminates waste, and drives your business toward a sustainable, energy-efficient future.",
     listLabel: "Scope of Work",
     items: [
-      "In-situ portable valve seat and valve face grinding",
-      "Cylinder head reconditioning on-site",
-      "Valve seat cutting and precision grinding",
-      "Restoration of valve and seat geometry to factory tolerances",
-      "Compatible with all major engine brands",
-      "Expert technicians ensuring precise clearances and sealing",
+      "PLC integration and programming for power plant control",
+      "SCADA system design, installation and commissioning",
+      "Instrumentation and process control setup",
+      "Autonomous performance monitoring and load balancing",
+      "Power grid protection and fault management systems",
+      "Industrial facility automation and optimization",
+      "Energy consumption analytics and reporting dashboards",
+      "Remote monitoring and control solutions",
     ],
     faqs: [
       {
-        q: "Why is valve and seat grinding necessary?",
-        a: "Over time, valve faces and seats wear, leading to poor compression, misfires, increased fuel consumption and power loss. Grinding restores the sealing surfaces to correct geometry, recovering engine performance.",
+        q: "What is energy automation?",
+        a: "Energy automation refers to the use of advanced control technologies — including PLC, SCADA, instrumentation and process control systems — to autonomously manage, optimize and protect power grids and industrial facilities without constant manual intervention.",
       },
       {
-        q: "Do you remove the cylinder head to perform grinding?",
-        a: "In most cases we perform the work in-situ at the engine, minimising downtime. Where head removal is required, our team can manage the full process including refitment and leak testing.",
+        q: "Which control platforms does NPNES work with?",
+        a: "Our engineers are experienced with leading industrial automation platforms and can integrate with existing systems from major manufacturers used in gas, diesel and HFO power plants across the 100KW to 18MW range.",
       },
       {
-        q: "Which engine makes do you support?",
-        a: "Our portable grinding equipment is compatible with all major engine manufacturers including MWM (Deutz), Jenbacher, MAN, Wartsila, Caterpillar, Waukesha, Cummins and Perkins.",
+        q: "How does automation improve uptime?",
+        a: "By continuously monitoring key performance parameters and automatically responding to faults or deviations, automated systems reduce unplanned downtime, trigger protective actions faster than manual intervention and provide predictive maintenance data.",
       },
       {
-        q: "How do you verify the quality of the grind?",
-        a: "We use engineer's blue and leak-down testing to verify that each valve and seat meets the required sealing standard before the engine is returned to service.",
+        q: "Can NPNES automate an existing plant?",
+        a: "Yes. We assess your current control infrastructure and design a retrofit automation solution that integrates with your existing equipment, minimising disruption during installation and commissioning.",
       },
     ],
   },
@@ -473,67 +473,7 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Available Generators — shown only on used-power-plants */}
-      {slug === "used-power-plants" && (
-        <section className="bg-gray-light py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
-                In Stock
-              </p>
-              <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase">
-                Available Generators
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {generators.map((gen) => (
-                <div
-                  key={gen.slug}
-                  className="bg-white rounded-lg shadow-sm border border-gray-border hover:shadow-md hover:border-brand transition-all duration-200 overflow-hidden"
-                >
-                  {/* Card image */}
-                  <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
-                    <Image
-                      src={gen.images[0]}
-                      alt={gen.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Card body */}
-                  <div className="p-5">
-                    <h3 className="font-heading font-bold text-lg text-brand uppercase mb-3">
-                      {gen.name}
-                    </h3>
-                    <div className="border-t border-gray-border pt-3 space-y-2 mb-4">
-                      {[
-                        { label: "Brand", value: gen.brand },
-                        { label: "Model", value: gen.model },
-                        { label: "Fuel", value: gen.fuel },
-                        { label: "kW", value: String(gen.kw) },
-                      ].map((row) => (
-                        <div key={row.label} className="flex items-center justify-between text-sm">
-                          <span className="text-charcoal-mid">{row.label}:</span>
-                          <span className="font-bold text-charcoal">{row.value}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex justify-end">
-                      <Link
-                        href={`/used-power-plants/${gen.slug}`}
-                        className="border border-brand text-brand text-sm font-semibold px-4 py-2 rounded hover:bg-brand hover:text-white transition-colors duration-200"
-                      >
-                        View Details
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Available Generators — hidden */}
 
       {/* View all */}
       <section className="bg-gray-light py-16">

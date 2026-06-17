@@ -8,7 +8,7 @@ import {
   Monitor,
   Package,
   Wind,
-  Settings2,
+  Cpu,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -67,10 +67,10 @@ const services = [
     desc: "Emissions analysis facility available as part of NPNES's commitment to searching for environment-friendly power generation solutions.",
   },
   {
-    slug: "cylinder-head-valve-grinding",
-    icon: Settings2,
-    title: "Cylinder Head Seat & Valve Grinding",
-    desc: "On-site valve and seat grinding using portable in-situ machines, restoring cylinder head geometry to factory tolerances for all major engine brands.",
+    slug: "energy-automation",
+    icon: Cpu,
+    title: "Energy Automation",
+    desc: "Integrating advanced PLC, SCADA systems, instrumentation and process control to autonomously manage, optimize and protect your critical power grids and industrial facilities.",
   },
 ];
 

@@ -40,7 +40,7 @@ export default function AboutPage() {
         className="relative flex items-center justify-center py-24"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80')",
+            "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "40vh",

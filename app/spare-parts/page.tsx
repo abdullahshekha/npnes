@@ -21,19 +21,6 @@ const brands = [
     ],
   },
   {
-    name: "PERKINS",
-    desc: "Genuine & OEM parts for Gas and Diesel Engines",
-    series: [
-      "4000 Series",
-      "3000 Series",
-      "2800 Series",
-      "2300 Series",
-      "1300 Series",
-      "1100 Series",
-      "400 Series",
-    ],
-  },
-  {
     name: "CATERPILLAR",
     desc: "Genuine & OEM parts for Caterpillar Diesel, GAS Engines",
     series: [
@@ -54,6 +41,19 @@ const brands = [
     name: "MTU (ROLLS ROYCE)",
     desc: "Genuine & OEM parts for MTU Diesel, GAS Engines",
     series: ["2000 Series", "4000 Series"],
+  },
+  {
+    name: "PERKINS",
+    desc: "Genuine & OEM parts for Gas and Diesel Engines",
+    series: [
+      "4000 Series",
+      "3000 Series",
+      "2800 Series",
+      "2300 Series",
+      "1300 Series",
+      "1100 Series",
+      "400 Series",
+    ],
   },
   {
     name: "Electronic Control Parts",

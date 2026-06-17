@@ -11,7 +11,7 @@ const serviceLinks = [
   { href: "/services/amc", label: "Annual Maintenance Contract" },
   { href: "/services/operation-maintenance", label: "Operation & Maintenance" },
   { href: "/services/engine-overhauling", label: "Engine Overhauling" },
-  { href: "/services/cylinder-head-valve-grinding", label: "Cylinder Head & Valve Grinding" },
+  { href: "/services/energy-automation", label: "Energy Automation" },
   { href: "/services/electrical-switchgear", label: "Electrical & Switchgear" },
   { href: "/services/electronic-repairs", label: "Electronic Repairs" },
   { href: "/services/used-power-plants", label: "Used Power Plants" },
