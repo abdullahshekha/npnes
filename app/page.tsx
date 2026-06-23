@@ -108,7 +108,7 @@ export default function Home() {
         className="relative flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80')",
+            "url('/images/hero-cat-plant-row.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "63vh",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   BookOpen,
@@ -40,7 +41,7 @@ export default function AboutPage() {
         className="relative flex items-center justify-center py-24"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')",
+            "url('/images/hero-installation.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "40vh",
@@ -64,28 +65,53 @@ export default function AboutPage() {
       {/* CEO Message */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
-            Leadership
-          </p>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase mb-8">
-            CEO Message
-          </h2>
-          <blockquote className="border-l-4 border-brand pl-6 text-charcoal-mid leading-8 text-base max-w-4xl">
-            <p>
-              I am extremely proud of what we are going to achieve, and even more excited about our
-              outlook for an equally promising future business from across the world while earning
-              our clients&apos; trust along the way. It is satisfying to know that we are able to
-              help our clients build the strategic plan that enable them to connect and operate
-              critical aspects of their business more efficiently and economically.
-            </p>
-            <p className="mt-4">
-              Customer satisfaction is the hallmark by which we measure our performance, and we hold
-              ourselves, as do our clients to the highest standards of quality. In this evolving
-              marketplace, our clients are more informed than ever about their solutions provider
-              options. Even so, they will select NPNES as their partner of choice because of our
-              experience, commitment &amp; high quality services.
-            </p>
-          </blockquote>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Text */}
+            <div>
+              <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
+                Leadership
+              </p>
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-charcoal uppercase mb-8">
+                CEO Message
+              </h2>
+              <blockquote className="border-l-4 border-brand pl-6 text-charcoal-mid leading-8 text-base">
+                <p>
+                  I am extremely proud of what we are going to achieve, and even more excited about
+                  our outlook for an equally promising future business from across the world while
+                  earning our clients&apos; trust along the way. It is satisfying to know that we
+                  are able to help our clients build the strategic plan that enable them to connect
+                  and operate critical aspects of their business more efficiently and economically.
+                </p>
+                <p className="mt-4">
+                  Customer satisfaction is the hallmark by which we measure our performance, and we
+                  hold ourselves, as do our clients to the highest standards of quality. In this
+                  evolving marketplace, our clients are more informed than ever about their solutions
+                  provider options. Even so, they will select NPNES as their partner of choice
+                  because of our experience, commitment &amp; high quality services.
+                </p>
+              </blockquote>
+            </div>
+
+            {/* CEO Photo */}
+            <div className="flex flex-col items-center lg:items-end">
+              <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-lg border-4 border-gray-border">
+                <Image
+                  src="/images/ceo-photo.jpg"
+                  alt="CEO of Net Power & Energy Solutions"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="mt-4 text-center lg:text-right">
+                <p className="font-heading font-bold text-charcoal uppercase text-lg tracking-wide">
+                  Chief Executive Officer
+                </p>
+                <p className="text-brand font-semibold text-sm uppercase tracking-widest">
+                  Net Power & Energy Solutions
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

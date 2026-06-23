@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Package, Phone } from "lucide-react";
 
@@ -80,7 +81,7 @@ export default function SparePartsPage() {
         className="relative flex items-center justify-center py-24"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80')",
+            "url('/images/spare-parts-gasket.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "40vh",
@@ -115,6 +116,38 @@ export default function SparePartsPage() {
             the following makers and many more. Emergency parts are available to facilitate the
             customer round the clock.
           </p>
+        </div>
+      </section>
+
+      {/* Parts photo strip */}
+      <section className="bg-white py-4 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 rounded-xl overflow-hidden">
+            <div className="relative h-52 rounded-lg overflow-hidden">
+              <Image
+                src="/images/spare-parts-gasket.jpg"
+                alt="Cylinder head gasket set and spare parts"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-52 rounded-lg overflow-hidden">
+              <Image
+                src="/images/spare-parts-piston.jpg"
+                alt="Engine piston and cylinder liner components"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-52 rounded-lg overflow-hidden col-span-2 md:col-span-1">
+              <Image
+                src="/images/overhauling-grinding.jpg"
+                alt="Cylinder head grinding machine workshop"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

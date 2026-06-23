@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
 
@@ -11,13 +12,19 @@ type ServiceData = {
   listLabel?: string;
   items: string[];
   image: string;
+  photos?: { src: string; alt: string }[];
   faqs: FAQ[];
 };
 
 const services: Record<string, ServiceData> = {
   "power-plant-services": {
     title: "Power Plant Services",
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
+    image: "/images/hero-jenbacher.jpg",
+    photos: [
+      { src: "/images/hero-cat-plant-row.jpg", alt: "Multiple CAT generator sets in a power plant hall" },
+      { src: "/images/hero-cat-plant.jpg", alt: "Caterpillar gas generator installed at client site" },
+      { src: "/images/hero-mwm-engine.jpg", alt: "MWM gas engine generator set" },
+    ],
     intro:
       "NPNES provides back-end product support for MWM, Caterpillar, Jenbacher, MAN, Wartsila, Waukesha, Guascor, Nohab and especially MWM (Deutz) gas, diesel and HFO engines through services and parts. Our aim is to be a real alternative to the OEM builder through fast, cost-effective and slim services.",
     listLabel: "Key Features",
@@ -50,7 +57,7 @@ const services: Record<string, ServiceData> = {
   },
   amc: {
     title: "Annual Maintenance Contract (AMC)",
-    image: "https://images.unsplash.com/photo-1509390288171-ce2088f7d08e?w=1920&q=80",
+    image: "/images/hero-cat-plant.jpg",
     intro:
       "AMC contracts can be structured around power conditioner or total power plant performance. Quarterly and annual service visits can be planned to ensure the power conditioner or plant is checked, calibrated, or serviced according to manufacturer recommendations. Our contracts ensure long system life and minimal downtime to maximise financial returns for the owner.",
     listLabel: "Contract Benefits",
@@ -83,7 +90,11 @@ const services: Record<string, ServiceData> = {
   },
   "operation-maintenance": {
     title: "Operation & Maintenance (O&M)",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80",
+    image: "/images/hero-cat-yellow.jpg",
+    photos: [
+      { src: "/images/overhauling-technician.jpg", alt: "NPNES technician performing maintenance on a large engine" },
+      { src: "/images/hero-cat-plant.jpg", alt: "Caterpillar engine at a client power plant" },
+    ],
     intro:
       "NPNES is one of the best O&M service providers at power plants. We help ensure optimum performance at existing power plants and provide consultation services for plants in planning stages through to project completion. Utilising our global resources, we provide complete plant services worldwide.",
     listLabel: "NPNES Takes Full Responsibility For",
@@ -121,7 +132,14 @@ const services: Record<string, ServiceData> = {
   },
   "engine-overhauling": {
     title: "Engine Major Overhauling & Trouble Shooting",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80",
+    image: "/images/overhauling-technician.jpg",
+    photos: [
+      { src: "/images/overhauling-cylinder-heads.jpg", alt: "Engine cylinder heads during major overhaul" },
+      { src: "/images/overhauling-valve-work.jpg", alt: "Technician working on engine cylinder head valves" },
+      { src: "/images/overhauling-turbo.jpg", alt: "Technician servicing turbocharger on engine" },
+      { src: "/images/overhauling-grinding.jpg", alt: "Cylinder head seat and valve grinding machine" },
+      { src: "/images/overhauling-pistons.jpg", alt: "Engine pistons and connecting rods laid out during overhaul" },
+    ],
     intro:
       "Engine major overhauling and emergency troubleshooting is one of the main activities in the NPNES company profile. We handle the full spectrum from routine maintenance through to complete engine rebuilds across all fuel types.",
     listLabel: "Scope of Work",
@@ -155,7 +173,11 @@ const services: Record<string, ServiceData> = {
   },
   "electrical-switchgear": {
     title: "Electrical Engineering & Switchgear Services",
-    image: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=1920&q=80",
+    image: "/images/electrical-control-panel.jpg",
+    photos: [
+      { src: "/images/electrical-control-panel.jpg", alt: "Electrical control panel and switchgear wiring" },
+      { src: "/images/electronic-plc-rack.jpg", alt: "PLC control rack with running status modules" },
+    ],
     intro:
       "NPNES is equipped with design & manufacturing facilities for a complete line of low/high voltage switchgear serving industrial, commercial, multi-story plazas, hotels, hospitals and banks. NPNES products meet national & international electricity standards and are run by a team of professional engineers with the spirit of innovation.",
     listLabel: "Products & Services",
@@ -194,7 +216,14 @@ const services: Record<string, ServiceData> = {
   },
   "electronic-repairs": {
     title: "Electronic Repairing Workshop",
-    image: "https://images.unsplash.com/photo-1562408590-e32931084e23?w=1920&q=80",
+    image: "/images/electronic-plc-modules.jpg",
+    photos: [
+      { src: "/images/electronic-actuator-1.jpg", alt: "Heinzmann electronic actuator unit" },
+      { src: "/images/electronic-actuator-2.jpg", alt: "Range of electronic actuator motors for gas engines" },
+      { src: "/images/electronic-actuator-3.jpg", alt: "Electronic actuator motor for power plant control" },
+      { src: "/images/electronic-plc-modules.jpg", alt: "Deutz MWM PLC control modules and TEM cards" },
+      { src: "/images/electronic-plc-rack.jpg", alt: "PLC control rack system with status indicators" },
+    ],
     intro:
       "We have a state-of-the-art electronic repairing workshop equipped with specialist tools and diagnostic equipment. Our experienced technicians handle repairs for critical industrial electronic components, ensuring minimum downtime for your plant.",
     listLabel: "Equipment We Repair",
@@ -227,7 +256,12 @@ const services: Record<string, ServiceData> = {
   },
   "used-power-plants": {
     title: "Supply of Used Power Plants",
-    image: "https://images.unsplash.com/photo-1636867900334-025210ac78a0?w=1920&q=80",
+    image: "/images/hero-cat-yellow.jpg",
+    photos: [
+      { src: "/images/hero-cat-plant-row.jpg", alt: "Row of CAT generator sets in a power plant facility" },
+      { src: "/images/hero-jenbacher.jpg", alt: "Jenbacher gas engine installed at site" },
+      { src: "/images/hero-mwm-engine.jpg", alt: "MWM gas engine generator set" },
+    ],
     intro:
       "NPNES provides all kinds of Diesel, Gas & HFO based used power plants. In addition to offering a vast selection of used engines, NPNES is dedicated to providing high-quality used equipment — a variety of popular makes and models. With a full range of used power generation equipment, NPNES has the equipment you need to keep your operation running.",
     listLabel: "Available Capacities & Types",
@@ -473,7 +507,37 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Available Generators — hidden */}
+      {/* Photo gallery */}
+      {svc.photos && svc.photos.length > 0 && (
+        <section className="bg-gray-light py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="font-heading font-semibold uppercase text-brand tracking-widest text-sm mb-2">
+                Our Work
+              </p>
+              <h2 className="font-heading font-bold text-3xl text-charcoal uppercase">
+                Photo Gallery
+              </h2>
+            </div>
+            <div className={`grid gap-3 ${svc.photos.length === 2 ? "grid-cols-1 sm:grid-cols-2" : svc.photos.length === 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 md:grid-cols-3"}`}>
+              {svc.photos.map((photo, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden rounded-lg shadow-sm ${svc.photos!.length === 5 && i === 0 ? "col-span-2 md:col-span-1" : ""}`}
+                  style={{ height: "220px" }}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* View all */}
       <section className="bg-gray-light py-16">
