@@ -104,10 +104,10 @@ export default function AboutPage() {
               </div>
               <div className="mt-4 text-center lg:text-right">
                 <p className="font-heading font-bold text-charcoal uppercase text-lg tracking-wide">
-                  Chief Executive Officer
+                  Qaiser Iqbal
                 </p>
                 <p className="text-brand font-semibold text-sm uppercase tracking-widest">
-                  Net Power & Energy Solutions
+                  Chief Executive Officer
                 </p>
               </div>
             </div>
